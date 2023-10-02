@@ -1,0 +1,148 @@
+.intro {
+  margin-bottom: 100px;
+  &-container {
+    position: relative;
+    // display: flex;
+    // align-items: center;
+  }
+  &-content {
+    max-width: 927px;
+    background-color: $blue;
+    transform: translateY(20%);
+    height: 450px;
+    overflow: hidden;
+  }
+  &-inner {
+    width: 100%;
+    padding: 60px;
+    color: $white-text;
+  }
+  &-h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: calc(29 / 20);
+  }
+  &-header {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: calc(59 / 48);
+    margin-bottom: 25px;
+  }
+  &-desc1,
+  &-desc2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(20 / 16);
+    max-width: 818px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    margin-bottom: 20px;
+  }
+  &-img {
+    max-width: 570px;
+    max-height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+}
+.arrow1 {
+  position: absolute;
+  top: 80%;
+  left: 200px;
+  font-size: 20px;
+  padding: 8px 30px;
+  border-radius: 50px;
+  border: #fff solid 1px;
+  color: $white-text;
+  outline: none;
+  z-index: 10;
+  background: transparent;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.arrow1:hover {
+  background: $white-text;
+  color: $blue;
+}
+.pull-left1 {
+  position: absolute;
+  left: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .intro {
+    &-header {
+      font-size: 38px;
+    }
+    &-desc1,
+    &-desc2 {
+      font-size: 14px;
+    }
+    &-img {
+      max-width: 520px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .intro {
+    &-content {
+      height: 350px;
+    }
+    &-inner {
+      padding: 30px;
+    }
+    &-h4 {
+      font-size: 18px;
+    }
+    &-header {
+      font-size: 30px;
+    }
+    &-desc1,
+    &-desc2 {
+      font-size: 13px;
+    }
+    &-img {
+      max-width: 450px;
+    }
+  }
+  .arrow1{
+    font-size: 14px;
+    left: 125px;
+  }
+  .pull-left1{
+    left: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro {
+    &-inner {
+      padding: 20px;
+    }
+    &-h4 {
+      font-size: 16px;
+    }
+    &-header {
+      font-size: 26px;
+    }
+    &-desc1,
+    &-desc2 {
+      font-size: 12px;
+    }
+    &-img{
+      max-width: 425px;
+    }
+  }
+  .arrow1 {
+    position: absolute;
+    font-size: 12px;
+    left: 110px;
+  }
+  .pull-left1 {
+    left: 20px;
+  }
+}

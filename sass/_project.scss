@@ -1,0 +1,115 @@
+.project {
+  margin-top: 140px;
+  margin-bottom: 120px;
+  &-head {
+    margin-bottom: 30px;
+  }
+  &-h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: calc(24 / 20);
+    margin-bottom: 6px;
+  }
+  &-title {
+    max-width: 430px;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: calc(56 / 45);
+    color: $blue;
+  }
+  &-main {
+    margin-right: 10px;
+    position: relative;
+    &-container {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+    }
+  }
+  &-img {
+    max-width: 740px;
+    flex: 1;
+    display: block;
+    overflow: hidden;
+    &:hover img {
+      scale: 1.1;
+    }
+  }
+  &-content {
+    flex: 1;
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      max-width: 517px;
+      color: $blue;
+      line-height: calc(29 / 24);
+      margin-bottom: 20px;
+    }
+    &-desc {
+      max-width: 575px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: calc(20 / 16);
+      margin-bottom: 10px;
+    }
+    &-more {
+      font-size: 16px;
+      font-weight: 500;
+      color: $gray-text;
+      line-height: calc(20 / 16);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project {
+    &-head {
+      text-align: center;
+    }
+    &-title {
+      margin: auto;
+      font-size: 40px;
+    }
+    &-main {
+      &-container {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .project {
+    &-title {
+      font-size: 35px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .project {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    &-head {
+      margin-bottom: 15px;
+    }
+    &-h3 {
+      font-size: 16px;
+    }
+    &-title {
+      font-size: 26px;
+    }
+    &-main-container {
+      gap: 10px;
+    }
+    &-content-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    &-content-desc {
+      font-size: 13px;
+    }
+    &-content-more {
+      font-size: 13px;
+    }
+  }
+}

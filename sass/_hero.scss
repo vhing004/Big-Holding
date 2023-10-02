@@ -1,0 +1,187 @@
+.hero {
+  max-height: 900px;
+  margin-bottom: 100px;
+  &-inner {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  &-title {
+    max-width: 1330px;
+    color: $white-text;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: calc(90 / 80);
+    margin-bottom: 41px;
+  }
+  &-btn {
+    padding: 15px 32px;
+    color: $white-text;
+    background-color: $blue;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: calc(29 / 24);
+    transition: 0.2s;
+    &:hover {
+      background-color: $red;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 80%;
+  left: 200px;
+  font-size: 20px;
+  padding: 8px 30px;
+  border-radius: 50px;
+  border: #fff solid 1px;
+  color: $white-text;
+  outline: none;
+  z-index: 10;
+  background: transparent;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.arrow:hover {
+  background: $white-text;
+  color: $blue;
+}
+.pull-left {
+  position: absolute;
+  left: 100px;
+}
+.slick-dots {
+  position: absolute;
+  top: 85%;
+  right: 20%;
+  transform: translateX(-20%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+  color: $white-text;
+  transition: all 0.25s linear;
+}
+.slick-dots li {
+  list-style: none;
+}
+.slick-dots button {
+  cursor: pointer;
+  font-size: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  background-color: $gray-text;
+}
+.slick-dots .slick-active button {
+  background: $white-text;
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (max-width: 1350px) {
+  .hero {
+    &-title {
+      font-size: 70px;
+      max-width: 1000px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    &-title {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    &-btn {
+      font-size: 14px;
+    }
+  }
+  .arrow {
+    font-size: 18px;
+  }
+  .slick-dots button {
+    width: 18px;
+    height: 18px;
+  }
+  .slick-dots .slick-active button {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    &-title {
+      font-size: 40px;
+    }
+    &-btn {
+      font-size: 12px;
+      padding: 10px 27px;
+    }
+  }
+  .arrow {
+    font-size: 14px;
+    padding: 5px 25px;
+    left: 165px;
+  }
+  .pull-left {
+    left: 80px;
+  }
+  .slick-dots {
+    top: 80%;
+  }
+  .slick-dots button {
+    width: 15px;
+    height: 15px;
+  }
+  .slick-dots .slick-active button {
+    width: 17px;
+    height: 17px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero {
+    margin-bottom: 35px;
+    &-content {
+      top: 60%;
+      left: 30px;
+    }
+    &-title {
+      font-size: 25px;
+    }
+    &-btn {
+      font-size: 10px;
+      padding: 8px 15px;
+    }
+  }
+  .arrow {
+    top: 80%;
+    left: 80%;
+    transform: translateY(-45%);
+    font-size: 12px;
+    padding: 3px 18px;
+  }
+  .pull-left {
+    left: calc(80% - 60px);
+  }
+}
