@@ -1,0 +1,126 @@
+.content {
+    margin-bottom: 40px;
+  &-container {
+    position: relative;
+    padding: 15px;
+    z-index: 10;
+    background-color: $white-text;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 15px;
+      right: 15px;
+      height: calc(100% - 15px);
+      background: linear-gradient(
+        180deg,
+        rgba(13, 76, 121, 0) 0%,
+        #000 100%,
+        #0d4c79 100%
+      );
+      z-index: 12;
+    }
+  }
+  &-inner {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% - 30px);
+    left: 30px;
+    right: 30px;
+    transform: translateY(-100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &-title {
+    max-width: 700px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: calc(29 / 24);
+    color: $white-text;
+    margin-bottom: 15px;
+  }
+  &-desc {
+    max-width: 950px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: calc(20 / 16);
+    color: $white-text;
+  }
+  &-link{
+    padding: 11px 18px;
+    font-size: 16px;
+    color: $white-text;
+    background-color: $blue;
+    flex-shrink: 0;
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+    .content{
+        margin-bottom: 30px;
+        &-title{
+            max-width: 600px;
+            font-size: 22px;
+        }
+        &-desc{
+            font-size: 15px;
+            max-width: 700px;
+        }
+        &-link{
+            font-size: 15px;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .content{
+        margin-bottom: 20px;
+        &-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        &-title{
+            max-width: 700px;
+            font-size: 20px;
+            margin-bottom: 10px;    
+        }
+        &-desc{
+            font-size: 14px;
+            max-width: 700px;
+        }
+        &-link{
+            font-size: 14px;
+            padding: 8px 18px;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .content{
+        &-title{
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        &-desc{
+            display: none;
+        }
+        &-link{
+            font-size: 13px;
+            background: transparent;
+            text-decoration: underline;
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .content{
+            &-title{
+            font-size: 16px;
+        }
+        &-link{
+            font-size: 12px;
+        }
+    }
+}

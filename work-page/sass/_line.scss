@@ -1,0 +1,16 @@
+.line{
+    width: 100%;
+    background: #ccc ;
+    height: 0.5px;
+    margin-bottom: 60px;
+}
+@media screen and (max-width: 767px){
+    .line{
+        margin-bottom: 45px;
+    }
+}
+@media screen and (max-width: 500px){
+    .line{
+        margin-bottom: 30px;
+    }
+}

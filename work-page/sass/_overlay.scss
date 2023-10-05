@@ -1,0 +1,68 @@
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 1000vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200000000000;
+    display: none;
+
+  &-inner {
+    max-width: 300px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $white-text;
+    z-index: 1000000;
+  }
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0px 15px;
+    border-bottom: 0.5px solid #b9c0c7;
+  }
+  &-logo {
+    height: 30px;
+  }
+  &-icon {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  &-item {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 0.5px solid #b9c0c7;
+    & a {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #212529;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &-social {
+    border-bottom: 0.5px solid #b9c0c7;
+    &-inner {
+      display: flex;
+      align-items: center;
+      max-width: 170px;
+      margin: auto;
+      gap: 20px;
+      height: 65px;
+    }
+  }
+  &-icon {
+    &-social {
+      transition: 0.2s;
+      height: 20px;
+      &:hover {
+        filter: brightness(10%);
+      }
+    }
+  }
+}

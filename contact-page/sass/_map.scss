@@ -1,0 +1,49 @@
+.map{
+    margin-bottom: 50px;
+    &-title{
+        font-size: 45px;
+        font-weight: 700;
+        line-height: calc(57 / 45);
+        color: $blue;
+        margin-bottom: 40px;
+    }
+    &-img{
+        & iframe{
+            max-width: 1400px;
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 1200px){
+    .map{
+        &-title{
+            font-size: 40px;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .map{
+        &-title{
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .map{
+        margin-bottom: 40px;
+        &-title{
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .map{
+        margin-bottom: 30px;
+        &-title{
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.func{
+    margin-bottom: 120px;
+    &-container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 70px;
+    }
+    &-item{
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+        padding: 50px 25px;
+        background-color: $white-text;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: 0.25s;
+        cursor: pointer;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 15%;
+            left: 0;
+            transform: translateY(-15%);
+            height: 80px;
+            width: 5px;
+            background-color: $blue;
+        }
+        &:hover{
+            background-color: $blue;
+        }
+        &:hover .func-title{
+            color: $white-text;
+        }
+        &:hover .func-desc{
+            color: $white-text;
+        }
+        &:hover .more span{
+            color: $white-text;
+        }
+        &:hover .more{
+            color: $white-text;
+        }
+    }
+    &-title{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: calc(40 / 32);
+        margin-bottom: 30px;
+        height: 75px;
+        color: $blue;
+        overflow: hidden;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    &-desc{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: calc(20 / 16);
+        color: #000;
+        margin-bottom: 30px;
+    }
+    &-more{
+        margin-top: auto;
+        display: flex;
+        font-size: 20px;
+        font-weight: 500;
+        color: $blue;
+        align-items: center;
+        gap: 10px;
+        & img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+.func-item:hover::after{
+    background-color: $white-text;
+}
+@media screen and (max-width: 1024px){
+.func{
+    margin-bottom: 100px;
+}
+}
+@media screen and (max-width: 767px){
+    .func{
+        margin-bottom: 80px;
+}
+}
+@media screen and (max-width: 500px){
+    .func{
+        margin-bottom: 50px;
+}
+}

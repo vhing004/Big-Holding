@@ -1,0 +1,113 @@
+.elvo{
+    margin-bottom: 120px;
+    &-title{
+        font-size: 45px;
+        font-weight: 600;
+        line-height: calc(55 / 45);
+        margin-bottom: 25px;
+        color: $blue;
+    }
+    &-desc{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: calc(20 / 16);
+            margin-bottom: 25px;
+            color: #000;
+    }
+}
+@media screen and (max-width: 1024px){
+    .elvo{
+        margin-bottom: 100px;
+        &-title{
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .elvo{
+        margin-bottom: 70px;
+        &-title{
+            font-size: 37px;
+            margin-bottom: 15px;
+        }
+        &-desc{
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .elvo{
+        margin-bottom: 40px;
+        &-title{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        &-desc{
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .func{
+        &-container{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-gap: 50px;
+        }
+    }
+    }
+    @media screen and (max-width: 767px){
+        .func{
+            &-container{
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                grid-gap: 40px;
+            }
+            &-item{
+                padding: 35px 25px;
+                &::after{
+                    top: calc(15% - 10px);
+                    height: 60px;
+                }
+            }
+            &-title{
+                font-size: 26px;
+                height: 32px;
+                margin-bottom: 25px;
+                -webkit-line-clamp: 1;
+            }
+            &-desc{
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+        }
+        .more{
+            font-size: 18px;
+        }
+    }
+    @media screen and (max-width: 500px){
+        .func{
+            &-container{
+                grid-gap: 30px;
+            }
+            &-item{
+                padding: 18px;
+                &::after{
+                    height: 40px;
+                    top: calc(10% - 5px);
+                }
+            }
+            &-title{
+                font-size: 20px;
+                height: 25px;
+                margin-bottom: 15px;
+            }
+            &-desc {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+        }
+        .more{
+            font-size: 15px;
+        }
+    }

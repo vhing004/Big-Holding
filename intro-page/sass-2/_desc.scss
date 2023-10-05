@@ -1,0 +1,33 @@
+.desc {
+  margin-bottom: 60px;
+  &-des,
+  &-des2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    text-align: justify;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+}
+@media screen and (max-width: 767px){
+    .desc{
+        margin-bottom: 50px;
+        &-des,
+        &-des2{
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .desc{
+        margin-bottom: 30px;
+        &-des,
+        &-des2{
+            font-size: 13px;
+        }
+    }
+}

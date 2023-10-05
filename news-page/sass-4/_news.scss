@@ -1,0 +1,267 @@
+.news {
+  padding-bottom: 90px;
+  &-title {
+    max-width: 640px;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: calc(56 / 45);
+    color: $blue;
+    margin-bottom: 30px;
+  }
+  &-mores {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &-more {
+    color: $blue;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: calc(24 / 20);
+    transition: 0.2s;
+  }
+  &-icon {
+    transform: translateY(2px);
+    transition: 0.2s;
+  }
+  &-list{
+    padding-bottom: 50px;
+  }
+  &-item {
+    padding: 15px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    max-width: 430px;
+    margin: 10px 25px;
+  }
+  &-img {
+    margin-bottom: 30px;
+    display: block;
+    overflow: hidden;
+    max-width: 640px;
+    // height: 270px;
+    flex-shrink: 0;
+    transition: 0.25s;
+  }
+  &-h3 {
+    max-width: 640px;
+    font-size: 20px;
+    font-weight: 600;
+    height: 48px;
+    line-height: calc(24 / 20);
+    color: #1e1e1e;
+    margin-bottom: 15px;
+    transition: 0.25s;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+  }
+  &-day {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    color: $blue;
+    & a {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: calc(20 / 16);
+    }
+    & time {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: calc(20 / 16);
+    }
+  }
+  &-desc {
+    margin-top: auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(20 / 16);
+    margin-bottom: 16px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  &-watch {
+    margin-top: auto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: calc(18 / 15);
+    color: $gray-text;
+    transition: 0.25s;
+  }
+}
+.news-item:hover .news-h3 {
+  color: $red;
+}
+.news-item:hover .news-watch {
+  color: $red;
+}
+.news-item:hover .news-img img {
+  transform: scale(1.1);
+}
+.arrow{
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+font-size: 20px;
+font-weight: 500;
+color: $blue;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.pull-left{
+  left: 30px;
+}
+.pull-right{
+  right: 30px;
+}
+.slick-dots{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.slick-dots li{
+font-size: 20px;
+font-weight: 500;
+color: #828282;
+}
+.slick-dots .slick-active button{
+  color: $blue    ;
+}
+@media screen and (max-width: 1200px){
+.news{
+  &-h3{
+    font-size: 18px;
+    height: 44px;
+  }
+  &-desc{
+    font-size: 15px;
+  }
+  &-day {
+    & a{
+      font-size: 15px;
+    }
+  }
+}
+}
+@media screen and (max-width: 1024px){
+  .news{
+    padding-bottom: 70px;
+    &-title{
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    &-h3{
+      font-size: 20px;
+      height: 48px;
+    }
+    &-desc{
+      font-size: 16px;
+    }
+    &-day{
+      & a{
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  .news{
+    &-item{
+      margin: 10px 15px;
+    }
+    &-img{
+      margin-bottom: 15px;
+    }
+    &-h3{
+      font-size: 18px;
+      height: 44px;
+      margin-bottom: 10px;
+    }
+    &-desc{
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    &-day {
+      margin-bottom: 10px;
+      & a{
+        font-size: 15px;
+      }
+    }
+  }
+  }
+  @media screen and (max-width: 767px){
+    .news{
+    padding-bottom: 50px;
+      &-title{
+        font-size: 30px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      &-item{
+        max-width: 640px;
+        margin: 10px 25px;
+      }
+      &-img{
+        margin-bottom: 20px;
+      }
+      &-h3{
+        height: 24px;
+        font-size: 20px;
+      }
+      &-desc{
+        font-size: 16px;
+      }
+      &-day{
+        & a{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px){
+    .news{
+    padding-bottom: 30px;
+      &-title{
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+      &-item{
+        margin: 10px 15px;
+      }
+      &-img{
+        margin-bottom: 15px;
+      }
+      &-h3{
+        height: 22px;
+        font-size: 18px;
+      }
+      &-desc{
+        font-size: 14px;
+      }
+      &-day{
+        & a{
+          font-size: 14px;
+        }
+      }
+    }
+.slick-dots li{
+  font-size: 18px;
+}
+  }
