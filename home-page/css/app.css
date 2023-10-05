@@ -79,6 +79,9 @@ p {
   flex-shrink: 0;
   cursor: pointer;
 }
+.header-logo img {
+  object-fit: contain;
+}
 .header-search, .header-menu {
   display: none;
 }

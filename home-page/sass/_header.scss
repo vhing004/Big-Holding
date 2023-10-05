@@ -20,6 +20,9 @@
     height: 40px;
     flex-shrink: 0;
     cursor: pointer;
+    & img {
+      object-fit: contain;
+    }
   }
   &-search,
   &-menu {
@@ -156,8 +159,8 @@
 }
 @media screen and (max-width: 500px) {
   .header {
-    &-nav{
-      &-inner{
+    &-nav {
+      &-inner {
         height: 50px;
       }
     }
