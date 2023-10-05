@@ -522,7 +522,6 @@ p {
   display: block;
   overflow: hidden;
   max-width: 400px;
-  height: 270px;
   flex-shrink: 0;
   transition: 0.25s;
 }
